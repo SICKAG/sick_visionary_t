@@ -1,0 +1,11 @@
+<!-- Entry point for using OpenNI devices -->
+<launch>
+
+  <arg name="camera" default="sick_3vistort_driver" />
+
+  <node pkg="sick_3vistort_driver" type="sick_3vistort_driver_node" name="$(arg camera)" output="screen" >
+    <param name="remote_device_ip" value="192.168.1.10" />
+    <param name="frame_id" value="camera" />
+  </node>
+
+</launch>
